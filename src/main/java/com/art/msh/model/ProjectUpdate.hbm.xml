@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.art.msh.model">
+	<class name="ProjectUpdateDomain" table="projectupdate">
+		<id name="id" type="java.lang.Integer">
+			<generator class="native" />
+		</id>
+		<property name="isForceUpdate" type="java.lang.Integer">
+			<column name="isForceUpdate" default="0" />
+		</property>
+		<property name="isNeedUpdate" type="java.lang.Integer">
+			<column name="isNeedUpdate" default="0" />
+		</property>
+		<property name="newVersionCode" type="java.lang.Integer">
+			<column name="newVersionCode" default="0" />
+		</property>
+		<property name="newVersionName"  length="15" />
+		<property name="updateAddress"  length="25"/>
+		<property name="updateDetail"    length="25" />
+		<property name="updateFileName"  	length="25" />
+	</class>
+</hibernate-mapping>
