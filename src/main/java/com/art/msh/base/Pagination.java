@@ -3,7 +3,7 @@ package com.art.msh.base;
 import java.util.List;
 
 /**
- * 项目描述:
+ * 项目描述:分页集合
  *
  * @Author 高小雄
  * 创建时间:2017/7/9

@@ -10,7 +10,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 
     <!-- 配置数据库连接池（c3p0） -->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" init-method="init" destroy-method="close">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!-- 基本信息 -->
         <property name="jdbcUrl" value="${jdbcUrl}"></property>
         <property name="driverClass" value="${driverClassName}"></property>
