@@ -54,6 +54,13 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
             </list>
         </property>
 
+        <!-- 自动扫描hbm方式配置的hibernate文件和.hbm文件 -->
+        <!--<property name="mappingDirectoryLocations">
+           <list>
+                <value>classpath:com/aode/domain</value>
+            </list>
+        </property>-->
+
     </bean>
 
     <!-- 配置事务管理器 -->
