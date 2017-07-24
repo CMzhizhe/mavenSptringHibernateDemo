@@ -14,14 +14,14 @@ import java.util.Map;
 @SuppressWarnings({ "rawtypes" })
 @Controller
 @Scope("prototype")
-@RequestMapping("/checkApp")
-public class CheckAppupDateController {
+@RequestMapping("/downFile")
+public class DownFileController {
 	@Resource
 	CheckAppupDateService checkService;
 	@SuppressWarnings("unchecked")
 	@ResponseBody
-	@RequestMapping(value ="/check")
-	public Map CheckAppMap(HttpServletRequest request){
+	@RequestMapping(value ="/down")
+	public Map HttpDownMap(HttpServletRequest request){
 		Map<String, Object> reMap = new HashMap<String, Object>();
 		Map<String, Map> map = new HashMap<String, Map>();
 		String action = request.getParameter("action");
@@ -30,7 +30,7 @@ public class CheckAppupDateController {
 		}
 		
 		if(action.equals("checkNewVersion")){
-			map = checkNewVersion(request);
+			map = Down(request);
 			return map;
 		}
 		
@@ -48,7 +48,7 @@ public class CheckAppupDateController {
 	* @param request
 	* @return
 	 */
-	private Map checkNewVersion(HttpServletRequest request){
+	private Map Down(HttpServletRequest request){
 		Map<String, Object> reMap = new HashMap<String, Object>();
 		Map<String, Map> map = new HashMap<String, Map>();
 		String versionNum = request.getParameter("versionNum");
